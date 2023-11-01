@@ -1,0 +1,200 @@
+#pgc-7-0-0,
+#pgc-7-1-0,
+#pgc-7-2-0,
+#pgc-7-3-0,
+#pgc-7-4-0,
+#pgc-7-5-0,
+#pgc-7-7-0,
+#pgc-7-8-0,
+#pgc-7-9-0,
+#pgc-7-10-0 {
+    width: 100%;
+    width: calc(100% - (0 * 30px))
+}
+
+#pl-7 #panel-7-0-0-0,
+#pl-7 #panel-7-0-0-1,
+#pl-7 #panel-7-1-0-0,
+#pl-7 #panel-7-2-0-0,
+#pl-7 #panel-7-2-0-1,
+#pl-7 #panel-7-3-0-0,
+#pl-7 #panel-7-3-0-1,
+#pl-7 #panel-7-4-0-0,
+#pl-7 #panel-7-5-0-0,
+#pl-7 #panel-7-5-0-1,
+#pl-7 #panel-7-6-1-0,
+#pl-7 #panel-7-6-1-1,
+#pl-7 #panel-7-7-0-0,
+#pl-7 #panel-7-7-0-1,
+#pl-7 #panel-7-7-0-2,
+#pl-7 #panel-7-7-0-3,
+#pl-7 #panel-7-8-0-0,
+#pl-7 #panel-7-9-0-0,
+#pl-7 #panel-7-9-0-1,
+#pl-7 #panel-7-10-0-0,
+#pl-7 #panel-7-10-0-1,
+#pl-7 #panel-7-10-0-2 {}
+
+#pg-7-0,
+#pg-7-1,
+#pg-7-2,
+#pg-7-3,
+#pg-7-4,
+#pg-7-5,
+#pg-7-6,
+#pg-7-7,
+#pg-7-8,
+#pg-7-9,
+#pg-7-10,
+#pl-7 .so-panel:last-child {
+    margin-bottom: 0px
+}
+
+#pgc-7-6-0,
+#pgc-7-6-2 {
+    width: 20%;
+    width: calc(20% - (0.8 * 30px))
+}
+
+#pgc-7-6-1 {
+    width: 60%;
+    width: calc(60% - (0.4 * 30px))
+}
+
+#pl-7 .so-panel {
+    margin-bottom: 30px
+}
+
+#pg-7-0>.panel-row-style,
+#pg-7-2>.panel-row-style,
+#pg-7-5>.panel-row-style,
+#pg-7-7>.panel-row-style,
+#pg-7-9>.panel-row-style {
+    padding: 100px 0px
+}
+
+#panel-7-0-0-0>.panel-widget-style {
+    margin-bottom: 2em
+}
+
+#pg-7-1>.panel-row-style {
+    background-color: #ecf2f0;
+    padding: 60px 0px
+}
+
+#pg-7-3>.panel-row-style,
+#pg-7-10>.panel-row-style {
+    background-color: #f6f4f2;
+    padding: 100px 0px
+}
+
+#pg-7-4>.panel-row-style {
+    background-color: #f6f4f2;
+    padding: 0px
+}
+
+#pg-7-6>.panel-row-style {
+    background-color: #b4d2c8;
+    background-image: url(../images/rsvp.jpg);
+    padding: 60px 0px
+}
+
+#panel-7-6-1-0>.panel-widget-style {
+    background-color: #ffffff;
+    padding: 3em;
+    margin-bottom: -30px
+}
+
+#panel-7-6-1-1>.panel-widget-style {
+    background-color: #ffffff;
+    padding: 0em 3em 3em
+}
+
+#panel-7-7-0-2>.panel-widget-style {
+    margin-top: 8em
+}
+
+#pg-7-8>.panel-row-style {
+    background-color: #c3bbab;
+    background-image: url(../images/quote.jpg);
+    padding: 90px 0px 30px
+}
+
+#panel-7-8-0-0>.panel-widget-style {
+    color: #ffffff
+}
+
+@media (max-width:767px) {
+
+    #pg-7-0.panel-no-style,
+    #pg-7-0.panel-has-style>.panel-row-style,
+    #pg-7-1.panel-no-style,
+    #pg-7-1.panel-has-style>.panel-row-style,
+    #pg-7-2.panel-no-style,
+    #pg-7-2.panel-has-style>.panel-row-style,
+    #pg-7-3.panel-no-style,
+    #pg-7-3.panel-has-style>.panel-row-style,
+    #pg-7-4.panel-no-style,
+    #pg-7-4.panel-has-style>.panel-row-style,
+    #pg-7-5.panel-no-style,
+    #pg-7-5.panel-has-style>.panel-row-style,
+    #pg-7-6.panel-no-style,
+    #pg-7-6.panel-has-style>.panel-row-style,
+    #pg-7-7.panel-no-style,
+    #pg-7-7.panel-has-style>.panel-row-style,
+    #pg-7-8.panel-no-style,
+    #pg-7-8.panel-has-style>.panel-row-style,
+    #pg-7-9.panel-no-style,
+    #pg-7-9.panel-has-style>.panel-row-style,
+    #pg-7-10.panel-no-style,
+    #pg-7-10.panel-has-style>.panel-row-style {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    #pg-7-0 .panel-grid-cell,
+    #pg-7-1 .panel-grid-cell,
+    #pg-7-2 .panel-grid-cell,
+    #pg-7-3 .panel-grid-cell,
+    #pg-7-4 .panel-grid-cell,
+    #pg-7-5 .panel-grid-cell,
+    #pg-7-6 .panel-grid-cell,
+    #pg-7-7 .panel-grid-cell,
+    #pg-7-8 .panel-grid-cell,
+    #pg-7-9 .panel-grid-cell,
+    #pg-7-10 .panel-grid-cell {
+        margin-right: 0
+    }
+
+    #pg-7-0 .panel-grid-cell,
+    #pg-7-1 .panel-grid-cell,
+    #pg-7-2 .panel-grid-cell,
+    #pg-7-3 .panel-grid-cell,
+    #pg-7-4 .panel-grid-cell,
+    #pg-7-5 .panel-grid-cell,
+    #pg-7-6 .panel-grid-cell,
+    #pg-7-7 .panel-grid-cell,
+    #pg-7-8 .panel-grid-cell,
+    #pg-7-9 .panel-grid-cell,
+    #pg-7-10 .panel-grid-cell {
+        width: 100%
+    }
+
+    #pgc-7-6-0,
+    #pgc-7-6-1 {
+        margin-bottom: 30px
+    }
+
+    #pl-7 .panel-grid-cell {
+        padding: 0
+    }
+
+    #pl-7 .panel-grid .panel-grid-cell-empty {
+        display: none
+    }
+
+    #pl-7 .panel-grid .panel-grid-cell-mobile-last {
+        margin-bottom: 0px
+    }
+}

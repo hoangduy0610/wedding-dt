@@ -1,0 +1,33 @@
+body {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.typography-menu,
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.header-section,
+.nav-links,
+#cancel-comment-reply-link {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.typography-section-heading {
+    font-family: "Alex Brush";
+}
+
+.typography-title,
+.typography-heading,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.comment-reply-title,
+.comments-title,
+#gwolle_gb_new_entry h3 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
