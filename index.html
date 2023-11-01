@@ -32,6 +32,12 @@
       <style type="text/css" media="all" id="siteorigin-panels-layouts-head">
          /* Layout 7 */
       </style>
+
+      <script>
+         window.onload = function() {
+         var context = new AudioContext();
+         }
+      </script>
    </head>
    <body class="home page-template page-template-page-templates page-template-one-page page-template-page-templatesone-page-php page page-id-7 jackrose-enable-animations siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home">
       <div id="preloader" class="preloader">
@@ -40,6 +46,13 @@
                <img src="images/preload.png" width="400" height="400" alt=""> 
             </div>
          </div>
+      </div>
+      <div id="continue-visit" style="position: absolute;top:0;left:0;z-index: 10000;background-color: #fff;width: 100%; height:100%; display: flex; justify-content: center; align-items: center">
+         <button type="button" id="continue-visit-button">
+            <span id="continue-visit-button">Continue Visit Site</span>
+            <span>
+               <i class="fa fa-angle-double-down"></i>
+            </span>
       </div>
       <div id="page" class="hfeed site">
          <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -732,7 +745,10 @@
                <span class="fa fa-music"></span>
             </button>
             <div class="background-music-embed">
-               <iframe width="100%" height="166" scrolling="no" allow="autoplay" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/134815445&color=b4d2c8&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false"></iframe>
+               <!-- <iframe width="100%" height="166" scrolling="no" allow="autoplay" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/134815445&color=b4d2c8&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false"></iframe> -->
+               <audio controls>
+                  <source src="bgmusic.mp3" type='audio/mp3'>
+               </audio>
             </div>
          </div>
       </div>
@@ -761,6 +777,10 @@
       <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
       <script>
          $(document).ready(function(){
+            $("#continue-visit-button").click(function(){
+               $('audio')[0].play();
+               $("#continue-visit").fadeOut(1000);
+            });
             $("#nha-trai").click(function(){
                $("#nha-trai").addClass("active");
                $("#nha-gai").removeClass("active");
