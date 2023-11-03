@@ -80,6 +80,10 @@
     left: -14px;
 }
 
+.img-timeline {
+    max-width: 60%;
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
@@ -125,5 +129,9 @@
 
     .card-img-top {
         max-width: 50%;
+    }
+
+    .img-timeline {
+        max-width: 100%;
     }
 }
