@@ -94,10 +94,10 @@ input[type="submit"]:active {
 .footer-section {
     padding: 15% 0 3em;
     background-color: #ffffff;
-    background-image: url(../images/footer.jpg);
+    background-image: url(../images/footer_img.jpeg);
     background-repeat: no-repeat;
-    background-position: center bottom;
-    color: #e5e5e5;
+    background-position: center center;
+    color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
