@@ -134,4 +134,16 @@
     .img-timeline {
         max-width: 100%;
     }
+
+    .footer-section {
+        background-size: contain;
+    }
+
+    .footer-logo>img {
+        transform:scale(0.5);
+        -ms-transform:scale(0.5); /* IE 9 */
+        -moz-transform:scale(0.5); /* Firefox */
+        -webkit-transform:scale(0.5); /* Safari and Chrome */
+        -o-transform:scale(0.5); /* Opera */
+    }
 }
