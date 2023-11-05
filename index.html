@@ -61,19 +61,19 @@
             <div class="hero-slider" data-jackrose-autoplay="5000">
                <div id="hero-slide-0" class="hero-slide">
                   <div class="hero-slide-background section-background">
-                     <img class="image-bg" alt="" src="images/hero3.jpg" width="1600" height="900" data-stellar-ratio="0.5">
+                     <img class="image-bg" alt="" src="images/1.jpeg" width="1600" height="900" data-stellar-ratio="0.5">
                   </div>
                   <div class="hero-slide-overlay" style="background-color: rgba(130,160,150,0.3)"></div>
                </div>
                <div id="hero-slide-1" class="hero-slide">
                   <div class="hero-slide-background section-background">
-                     <img class="image-bg" alt="" src="images/hero2.jpg" width="1600" height="900" data-stellar-ratio="0.5">
+                     <img class="image-bg" alt="" src="images/2.jpeg" width="1600" height="900" data-stellar-ratio="0.5">
                   </div>
                   <div class="hero-slide-overlay" style="background-color: rgba(130,160,150,0.3)"></div>
                </div>
                <div id="hero-slide-2" class="hero-slide">
                   <div class="hero-slide-background section-background">
-                     <img class="image-bg" alt="" src="images/hero1.jpg" width="1600" height="900" data-stellar-ratio="0.5">
+                     <img class="image-bg" alt="" src="images/3.jpeg" width="1600" height="900" data-stellar-ratio="0.5">
                   </div>
                   <div class="hero-slide-overlay" style="background-color: rgba(130,160,150,0.3)"></div>
                </div>
@@ -843,6 +843,14 @@
       <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
       <script>
          $(document).ready(function(){
+            if($(window).width() < 568) {
+               $(".image-bg").each(function(i) {
+                  $(this).attr("src", "images/" + (i + 1) + "_por.jpeg");
+                  $(this).attr("width", "900");
+                  $(this).attr("height", "1600");
+               });
+            }
+
             $("#continue-visit-button").click(function(){
                $('audio')[0].play();
                $("#continue-visit").fadeOut(1000);
