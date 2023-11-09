@@ -497,7 +497,7 @@
                                                             <label>Con số phía ngoài thiệp</label>
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap yourname">
-                                                               <input type="text" name="ticket_num" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-block" aria-required="true" aria-invalid="false" />
+                                                               <input type="text" id="ticket_num_id" name="ticket_num" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input-block" aria-required="true" aria-invalid="false" />
                                                             </span>
                                                          </p>
                                                          <p>
@@ -579,25 +579,25 @@
                                                    <div class="jackrose-sow-team-grid-item-photo">
                                                       <img width="240" height="240" src="images/khach_1.png" class="attachment-full size-full" alt=""/>
                                                    </div>
-                                                   <div class="jackrose-sow-team-grid-item-name typography-heading">Donald Morrison</div>
+                                                   <div id="ten_khach_1" class="jackrose-sow-team-grid-item-name typography-heading"></div>
                                                 </div>
                                                 <div class="jackrose-sow-team-grid-item jackrose-animation-fade-in-up">
                                                    <div class="jackrose-sow-team-grid-item-photo">
                                                       <img width="240" height="240" src="images/khach_2.png" class="attachment-full size-full" alt=""/>
                                                    </div>
-                                                   <div class="jackrose-sow-team-grid-item-name typography-heading"> Alexander Lawson</div>
+                                                   <div id="ten_khach_2" class="jackrose-sow-team-grid-item-name typography-heading"></div>
                                                 </div>
                                                 <div class="jackrose-sow-team-grid-item jackrose-animation-fade-in-up">
                                                    <div class="jackrose-sow-team-grid-item-photo">
                                                       <img width="240" height="240" src="images/khach_3.png" class="attachment-full size-full" alt=""/>
                                                    </div>
-                                                   <div class="jackrose-sow-team-grid-item-name typography-heading">Kyle Weaver</div>
+                                                   <div id="ten_khach_3" class="jackrose-sow-team-grid-item-name typography-heading"></div>
                                                 </div>
                                                 <div class="jackrose-sow-team-grid-item jackrose-animation-fade-in-up">
                                                    <div class="jackrose-sow-team-grid-item-photo">
                                                       <img width="240" height="240" src="images/khach_4.png" class="attachment-full size-full" alt=""/>
                                                    </div>
-                                                   <div class="jackrose-sow-team-grid-item-name typography-heading">Albert Garrett</div>
+                                                   <div id="ten_khach_4" class="jackrose-sow-team-grid-item-name typography-heading"></div>
                                                 </div>
                                              </div>
                                           </div>
@@ -864,6 +864,32 @@
       <script defer src="js/autoptimize_de8a63f6262ae77b19891424ad0c454a.js"></script>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
       <script>
+         const range = [
+            ["Mr Tuấn", "Mr Tài", "Mr Long", "Mr Hoàng", "Ms Trường An"],
+            ["Ms Trân",  "Mr Thanh Sang",  "Mr Trung Vũ",  "Mr Quang Lê",  "Mr Anh Tuấn", "Ms Thanh Trúc"],
+            ["Mr Thuấn",  "Mr Thạnh",  "Mr Thành",  "Ms Kathy", "Mr Thoại"],
+            ["Mr Phương Bắc",  "Mr Văn Thức",  "Ms Vân Trần", "Mr Tài Tuệ"],
+            ["Mr Kiên", "Mr Huấn", "Mr Vũ", "Ms Thảo An", "Ms Hiền", "Ms Viên", "Mr Bình"],
+            ["Mr Thắng Huỳnh", "Mr Thanh Nhật", "Mr Huỳnh Thái Dĩ", "Mr Nguyễn Hải Minh", "Ms Vân Huỳnh", "Ms Lại Hồng Hạnh"],
+            ["Ms Nguyễn Thị Thuật", "Ms Trần Thị Hoa", "Mr Đỗ Anh Hào", "Mr Trần Thanh Hiền", "Ms La Gia Nghi", "Ms Hoàng Ngọc Kiều", "Ms Trương Thu Trang"],
+            ["Mr Đào Minh Hòa", "Mr Nguyễn Thái Hải", "Ms Nguyễn Thị Ngọc Dung", "Mr Dương Bá Thông", "Ms Phạm Thị Phương Lan", "Mr Phạm Minh Đức"],
+            ["Mr Lê Hoàng Vỹ Tuấn ", "Ms Tiêu Vân Anh", "Mr Nguyễn Quốc Dũng", "Ms Trang", "Ms Nguyễn Ngọc Duy", "Mr Hoàng Hữu Tuấn"],
+            ["Ms Hà Lê", "Mr Hoàng Thanh Tuấn ", "Mr Lê Đắc Mai", "Mr Nguyễn Bảo Trung", "Ms Tuyết Mai", "Mr Đặng Trần Thức"],
+            ["Ms Mỹ Dung", "Mr Phiên An", "Ms Lã Hoài Mai", "Ms Minh Tú", "Mr Gia Hưng"],
+            ["Mr Thái", "Mr Tùng Lý", "Mr Can", "Mr Liêm", "Mr Khoa"],
+            ["Mr Phương", "Mr Long", "Mr Quốc Bảo", "Mr Phú", "Mr Phúc"],
+            ["Mr Thế Anh", "Mr Cao Cấp", "Mr Tuấn Cường", "Mr Phi Long", "Ms Bùi Phương Trinh", "Mr Tú"],
+            ["Mr Hai Muôn", "Mr Hùng", "Ms Thanh Thủy", "Ms Hồng", "Ms Hiệp"],
+            ["Anh Chị Đức - Hòa", "Hai em Dũng (Tí)", "Anh Chị Kiên - Thu", "Anh Chị Tôn - Lan", "Chú Thím Sương"],
+            ["2 Em Quốc", "2 Em Tùng - Châu", "Anh Chị Tư Tiền", "Anh Chị Minh", "2 em Đức"],
+            ["GĐ em Thông - Hằng", "GĐ em Thái", "GĐ em Trung", "GĐ em Phụng", "GĐ em Nam - Oanh"],
+            ["Ms Hiệp ", "Ms Kiều Trang", "Ms Ngân", "Mr Jimmy"],
+            ["2 cháu Hà - Xuân", "GĐ em Đức - Thơm", "2 cháu Thuần", "Anh Chị Lan", "2 em Chủ"],
+            ["Anh chị Đông - Nhàn", "GĐ em Nhân - Thanh", "Anh chị Thọ - Nga", "GĐ em Bình - Phương", "GĐ em Bằng"],
+            ["Ms Cẩm Tiên", "Ms Quỳnh Giang", "Ms Tuyết Linh", "Ms Huệ Kym"],
+            ["GĐ em Minh", "GĐ em Trâm", "GĐ em Tiên", "GĐ chị Nga", "GĐ chị Thủy", "Mợ Tuyết và em Loan"],
+            ["GĐ chị Huê", "GĐ chị Bé", "GĐ em Dịu", "GĐ em Thời", "GĐ em Mai"]
+         ];
          $(document).ready(function(){
             if($(window).width() < 568) {
                $(".image-bg").each(function(i) {
@@ -872,6 +898,111 @@
                   $(this).attr("height", "1600");
                });
             }
+            let ticket_n_id = null;
+            $('#ticket_num_id').on('input',function(e){
+               ticket_n_id = parseInt(e.target.value);
+               if (ticket_n_id <= 11 ) {
+                  range[0].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 28 ) {
+                  range[1].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 38 ) {
+                  range[2].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 51 ) {
+                  range[3].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 125 ) {
+                  range[4].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 160 ) {
+                  range[5].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 321 ) {
+                  range[6].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 508 ) {
+                  range[7].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 530 ) {
+                  range[8].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 566 ) {
+                  range[9].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 575 ) {
+                  range[10].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 590 ) {
+                  range[11].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 597 ) {
+                  range[12].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 619 ) {
+                  range[13].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 633 ) {
+                  range[14].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 658 ) {
+                  range[15].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 675 ) {
+                  range[16].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 685 ) {
+                  range[17].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 689 ) {
+                  range[18].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 712 ) {
+                  range[19].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 754) {
+                  range[20].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 786 ) {
+                  range[21].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 802 ) {
+                  range[22].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else if (ticket_n_id <= 887 ) {
+                  range[23].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               } else {
+                  ["","","","",""].sort(() => 0.5 - Math.random()).slice(0,4).forEach((element, index) => {
+                     $("#ten_khach_" + (index + 1)).html(element);
+                  });
+               }
+            });
 
             $("#continue-visit-button").click(function(){
                $('audio')[0].play();
